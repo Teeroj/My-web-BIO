@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>อาณาจักรสัตว์ | Kingdom Animalia</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:'Segoe UI',Tahoma,sans-serif;
+  background:linear-gradient(135deg,#0b132b,#1c2541,#3a86ff);
+  color:#fff;
+}
+
+header{
+  padding:70px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#2ec4b6,#3a86ff);
+  color:#00203f;
+}
+
+nav{
+  position:sticky;
+  top:0;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(6px);
+  padding:12px;
+  text-align:center;
+  z-index:10;
+}
+
+nav a{
+  color:#90dbf4;
+  margin:0 15px;
+  text-decoration:none;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+section{
+  display:none;
+  padding:70px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+section.active{display:block;}
+
+h2{color:#ffd166;font-size:2.3em;}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:rgba(255,255,255,0.12);
+  border-radius:18px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.4);
+  overflow:hidden;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.card-content{padding:20px;}
+
+.tag{
+  display:inline-block;
+  padding:6px 14px;
+  background:#ffd166;
+  color:#003049;
+  border-radius:20px;
+  font-size:.9em;
+  margin-bottom:10px;
+}
+
+button{
+  margin-top:10px;
+  padding:8px 14px;
+  border:none;
+  border-radius:20px;
+  background:#3a86ff;
+  color:#fff;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#ffd166;
+  color:#000;
+}
+
+/* ===== Modal ===== */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+  align-items:center;
+  justify-content:center;
+  z-index:100;
+}
+
+.modal-content{
+  background:#fff;
+  color:#000;
+  padding:30px;
+  border-radius:18px;
+  max-width:500px;
+  width:90%;
+}
+
+.close{
+  float:right;
+  font-size:22px;
+  cursor:pointer;
+}
+
+footer{
+  background:#000;
+  text-align:center;
+  padding:30px;
+  color:#aaa;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🐾 อาณาจักรสัตว์🐾</h1>
+<h1>🐾 (Kingdom Animalia)🐾</h1>
+<p>เว็บไซต์อินโฟกราฟิกเพื่อการเรียนรู้การจำแนกสัตว์</p>
+</header>
+
+<nav>
+<a onclick="showPage('home')">หน้าแรก</a>
+<a onclick="showPage('vertebrate')">สัตว์มีกระดูกสันหลัง</a>
+<a onclick="showPage('invertebrate')">สัตว์ไม่มีกระดูกสันหลัง</a>
+</nav>
+
+<!-- หน้าแรก -->
+<section id="home" class="active">
+  <h2>ภาพรวมอาณาจักรสัตว์</h2>
+
+  <p>
+    อาณาจักรสัตว์ (Animalia) แบ่งออกเป็น 2 กลุ่มใหญ่ คือ
+    <strong>สัตว์มีกระดูกสันหลัง</strong> และ
+    <strong>สัตว์ไม่มีกระดูกสันหลัง</strong>
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-content">
+        <h2>Chordata</h2>
+        <h2>(คอร์ดาตา)</h2>
+        <p>
+ สัตว์ที่มีโครงสร้างกระดูกสันหลังและระบบประสาทซับซ้อน
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>Invertebrate</h2>
+        <h2>(สัตว์ไม่มีกระดูกสันหลัง)</h2>
+        <p>
+          สัตว์ที่ไม่มีกระดูกสันหลัง พบมากที่สุดในธรรมชาติ
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- สัตว์มีกระดูกสันหลัง -->
+<section id="vertebrate">
+<h2>สัตว์มีกระดูกสันหลัง</h2>
+<h3>คือสัตว์ที่มี กระดูกสันหลังและโครงกระดูกภายในร่างกาย ช่วยพยุงลำตัวและปกป้องอวัยวะสำคัญ เช่น สมองและไขสันหลัง มีระบบประสาทและอวัยวะต่าง ๆ ที่พัฒนาแล้ว ทำให้สามารถเคลื่อนไหวและปรับตัวได้ดี</h3>
+<p></p>
+<p></p>
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c">
+<div class="card-content">
+<span class="tag">ปลา</span>
+<p>อาศัยในน้ำ หายใจด้วยเหงือก</p>
+<button onclick="openModal('ปลา (Fish)','เป็นสัตว์มีกระดูกสันหลังที่อาศัยอยู่ในน้ำ หายใจด้วยเหงือก มีครีบช่วยในการเคลื่อนที่')">ดูรายละเอียด</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1496070242169-b672c576566b">
+<div class="card-content">
+<span class="tag">ครึ่งบกครึ่งน้ำ</span>
+<p>กบ ซาลาแมนเดอร์</p>
+<button onclick="openModal('Amphibia','อาศัยได้ทั้งบนบกและในน้ำ ผิวหนังชุ่มชื้น')">ดูรายละเอียด</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1472645977521-95bbf4f0a748">
+<div class="card-content">
+<span class="tag">เลื้อยคลาน</span>
+<p>งู เต่า จระเข้</p>
+<button onclick="openModal('Reptilia','ผิวหนังแห้ง มีเกล็ด ปรับตัวอยู่บนบกได้ดี')">ดูรายละเอียด</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1606567595334-d39972c85dbe">
+<div class="card-content">
+<span class="tag">นก</span>
+<p>มีขน มีปีก</p>
+<button onclick="openModal('Aves','เป็นสัตว์เลือดอุ่น วางไข่ และส่วนใหญ่บินได้')">ดูรายละเอียด</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://plus.unsplash.com/premium_photo-1710406110954-fe2b58f118b0">
+<div class="card-content">
+<span class="tag">เลี้ยงลูกด้วยนม</span>
+<p>คน สุนัข ช้าง</p>
+<button onclick="openModal('Mammalia','มีต่อมน้ำนม ใช้เลี้ยงลูกอ่อน')">ดูรายละเอียด</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- สัตว์ไม่มีกระดูกสันหลัง -->
+<section id="invertebrate">
+<h2>สัตว์ไม่มีกระดูกสันหลัง</h2>
+<h3>คือสัตว์ที่ ไม่มีกระดูกสันหลัง โครงสร้างร่างกายมักเรียบง่ายหรือมีโครงแข็งภายนอก พบได้มากที่สุดในธรรมชาติและมีความหลากหลายของชนิดสูงมาก</h3>
+<p></p>
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1674121929308-80eac145d8fc">
+<div class="card-content">
+<span class="tag">Porifera</span>
+<p>ฟองน้ำ</p>
+<button onclick="openModal('Porifera','สัตว์ที่มีรูพรุน ไม่มีเนื้อเยื่อแท้จริง')">ดูรายละเอียด</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1508625935447-e0ebc2cdf6bf">
+<div class="card-content">
+<span class="tag">Cnidaria</span>
+<p>แมงกะพรุน ปะการัง</p>
+<button onclick="openModal('Cnidaria','มีเข็มพิษ (Cnidocyte) ใช้จับเหยื่อ')">ดูรายละเอียด</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgHkVBItjcKNvSwIvfzUHvJXyhuxb20Td_Pg">
+<div class="card-content">
+<span class="tag">Platyhelminthes</span>
+<p>หนอนตัวแบน</p>
+<button onclick="openModal('Platyhelminthes','ลำตัวแบน ไม่มีช่องว่างในลำตัว')">ดูรายละเอียด</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZorSBzYelaLoKJEcbh9MDua3FFZz6dhY0bw">
+<div class="card-content">
+<span class="tag">Nematoda</span>
+<p>หนอนตัวกลม</p>
+<button onclick="openModal('Nematoda','ลำตัวกลมยาว ไม่เป็นปล้อง')">ดูรายละเอียด</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://plus.unsplash.com/premium_photo-1664304479796-f8518e45409d?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+<div class="card-content">
+<span class="tag">Annelida</span>
+<p>หนอนปล้อง</p>
+<button onclick="openModal('Annelida','ลำตัวแบ่งเป็นปล้องชัดเจน')">ดูรายละเอียด</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnSoZYj69mcp4PstFCeEg12C51bE3rhLkV5g">
+<div class="card-content">
+<span class="tag">Mollusca</span>
+<p>หอย หมึก</p>
+<button onclick="openModal('Mollusca','ลำตัวอ่อนนุ่ม ส่วนมากมีเปลือก')">ดูรายละเอียด</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://plus.unsplash.com/premium_photo-1667864262393-b5319164c302">
+<div class="card-content">
+<span class="tag">Arthropoda</span>
+<p>แมลง กุ้ง ปู</p>
+<button onclick="openModal('Arthropoda','มีขาเป็นข้อปล้อง และโครงแข็งภายนอก')">ดูรายละเอียด</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://img.pikbest.com/ai/illus_our/20230421/9be35611be4665ef864c129221b7aa61.jpg">
+<div class="card-content">
+<span class="tag">Echinodermata</span>
+<p>ดาวทะเล เม่นทะเล</p>
+<button onclick="openModal('Echinodermata','ผิวมีหนาม อาศัยในทะเล')">ดูรายละเอียด</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<footer>
+เว็บอินโฟกราฟิกอาณาจักรสัตว์ โดย นายตรีโรจน์
+</footer>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal()">×</span>
+<h3 id="modalTitle"></h3>
+<p id="modalText"></p>
+</div>
+</div>
+
+<script>
+function showPage(page){
+  document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
+  document.getElementById(page).classList.add("active");
+}
+
+function openModal(title,text){
+  document.getElementById("modalTitle").innerText = title;
+  document.getElementById("modalText").innerText = text;
+  document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal(){
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
